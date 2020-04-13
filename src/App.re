@@ -132,7 +132,7 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
         make([
           Lg(Padding(P32)),
           Sm(Padding(Py32)),
-          BackgroundColor(BgYellow300),
+          BackgroundColor(BgYellow400),
           Display(Flex),
           JustifyContent(JustifyCenter),
         ])
