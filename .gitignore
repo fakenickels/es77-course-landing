@@ -25,3 +25,5 @@ yarn-error.log*
 .merlin
 lib
 *.bs.js
+
+.tailwind_ppx_cache

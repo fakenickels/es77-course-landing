@@ -19,12 +19,11 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
-    "bs-css",
-    "re-tailwind",
     "@ahrefs/bs-emotion"
   ],
   "ppx-flags": [
-    "@davesnx/styled-ppx/styled-ppx"
+    "@davesnx/styled-ppx/styled-ppx",
+    [ "@dylanirlbeck/tailwind-ppx/tailwind-ppx", "-path ./node_modules/tailwindcss/dist/tailwind.min.css" ]
   ],
   "refmt": 3,
   "warnings": {

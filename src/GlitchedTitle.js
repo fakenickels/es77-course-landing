@@ -37,7 +37,14 @@ const Glitch = styled.h2.attrs(({children}) => ({
     color: ${textColor};
     background-color: ${backgroundColor};
     font-style: italic;
-    font-size: ${props => props.variant === "featured" ? "10rem" : "auto" };
+
+    @media(max-width: 700px) {
+      font-size: 4em;
+    }
+
+    @media(min-width: 700px) {
+      font-size: 10em;
+    }
 
    &::after, &::before {
     content: attr(data-text);
