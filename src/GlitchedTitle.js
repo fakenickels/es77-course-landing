@@ -4,7 +4,7 @@ import styled, {css, keyframes} from 'styled-components'
 // inspired from https://css-tricks.com/glitch-effect-text-images-svg/
 
 // const skewDistortion = `transform: skew(${Math.random() * 20 * (Math.random() > 0.5 ? -1 : 1)}deg)`
-const noiseAnimationSteps = 20;
+const noiseAnimationSteps = 40;
 const noiseAnimation = keyframes`
   ${
     Array.from({length: noiseAnimationSteps}).map((_, index) => {
@@ -19,9 +19,9 @@ const noiseAnimation = keyframes`
 `
 
 const glitchColor1 = 'red'
-const glitchColor2 = 'yellow'
-const backgroundColor = 'white'
-const textColor = 'black'
+const glitchColor2 = 'blue'
+const backgroundColor = '#000'
+const textColor = 'white'
 
 const Wrapper = styled.div`
   background-color: ${backgroundColor};
@@ -37,6 +37,7 @@ const Glitch = styled.h2.attrs(({children}) => ({
     color: ${textColor};
     background-color: ${backgroundColor};
     font-style: italic;
+    font-weight: bold;
 
     @media(max-width: 700px) {
       font-size: 4em;
@@ -69,7 +70,7 @@ const Glitch = styled.h2.attrs(({children}) => ({
     text-shadow: 2px 0 ${glitchColor2};
     background-color: ${backgroundColor};
     color: ${textColor};
-    animation: ${noiseAnimation} 4s infinite linear alternate-reverse;
+    animation: ${noiseAnimation} 3s infinite linear alternate-reverse;
   }
 `
 

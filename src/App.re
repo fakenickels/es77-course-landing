@@ -3,7 +3,7 @@
 [@react.component]
 let make = () => {
   <>
-    <div className=[%tw "h-64 py-64 md:py-0 md:h-screen w-screen lg:block"]>
+    <div className=[%tw "bg-black h-64 py-64 md:py-0 md:h-screen w-screen lg:block"]>
       <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
         <div>
           <GlitchedTitle glitchText1="ReasonML">
