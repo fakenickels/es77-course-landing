@@ -17,7 +17,7 @@ let make = () => {
       </div>
     </div>
     <div className=[%tw "bg-yellow-400 lg:px-64 lg:py-32 sm:px-32 sm:py-10"]>
-      <div className=[%tw "p-10 flex justify-center"]>
+      <div className=[%tw "pb-10 flex justify-center"]>
         <img
           src={requireAsset("./images/fakenickels.jpg")}
           className=[%tw "h-32 w-32 rounded-full"]
