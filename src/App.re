@@ -78,14 +78,14 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
           <ul className=[%tw "py-5 pb-10"]>
             {[|
                {j|Filosofia|j},
+               {j|Integração com tooling JS|j},
+               {j|Promises te tapearam|j},
                {j|Conceitos básicos da linguagem|j},
-               {j|Integração com JS|j},
-               {j|Um outro tipo de TDD|j},
-               {j|Promises te enganaram|j},
                {j|Forms com ReasonReact|j},
                {j|CSS in Reason|j},
                {j|GraphQL com Reason|j},
-               {j|Como fazer uma lib NPM simples com Reason|j},
+               {j|Um outro tipo de TDD|j},
+               {j|Lib NPM simples com Reason|j},
                {j|O futuro do Reason|j},
              |]
              ->Belt.Array.mapWithIndex((index, item) => {
