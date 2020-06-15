@@ -117,7 +117,7 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
       <div className=[%tw "pt-10 divide-y divide-gray-200"]>
         {
           [|
-            ({j|Preciso desse curso pra aprender Reason?|j}, {j|NÃO!|j}),
+            ({j|Preciso desse curso pra aprender Reason?|j}, {j|NÃO! Você pode aprender nas documentações oficiais e da comunidade. Eu apenas te guio pelo caminho mais rapidamente.|j}),
             ({j|Preciso saber programação funcional antes?|j}, {j|Ter alguma noção ajudaria, mas não é preciso. Você vai poder tirar dúvidas comigo a qualquer hora durante o curso.|j}),
             ({j|Posso ser estornado?|j}, {j|Sim. A qualquer momento em até no máximo 3 semanas. Fale comigo no https://t.me/fakenickels|j}),
             ({j|Posso ter um certificado desse curso?|j}, {j|Se você precisa de um certificado fale comigo no https://t.me/fakenickels|j}),
