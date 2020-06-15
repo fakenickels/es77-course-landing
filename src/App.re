@@ -85,6 +85,7 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
                {j|Forms com ReasonReact|j},
                {j|CSS in Reason|j},
                {j|GraphQL com Reason|j},
+               {j|Como fazer uma lib NPM simples com Reason|j},
                {j|O futuro do Reason|j},
              |]
              ->Belt.Array.mapWithIndex((index, item) => {
@@ -110,6 +111,28 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
         </div>
       </div>
     </div>
+
+    <div className=[%tw "py-16 px-10"]>
+      <h1 className=[%tw "text-6xl"]>"Perguntas frequentes"->React.string</h1>
+      <div className=[%tw "pt-10 divide-y divide-gray-200"]>
+        {
+          [|
+            ({j|Preciso desse curso pra aprender Reason?|j}, {j|NÃO!|j}),
+            ({j|Preciso saber programação funcional antes?|j}, {j|Ter alguma noção ajudaria, mas não é preciso. Você vai poder tirar dúvidas comigo a qualquer hora durante o curso.|j}),
+            ({j|Posso ser estornado?|j}, {j|Sim. A qualquer momento em até no máximo 3 semanas. Fale comigo no https://t.me/fakenickels|j}),
+            ({j|Posso ter um certificado desse curso?|j}, {j|Se você precisa de um certificado fale comigo no https://t.me/fakenickels|j}),
+          |]
+          ->Belt.Array.mapWithIndex((index, (question, answer)) => {
+            <div key={string_of_int(index)} className=[%tw "py-10 md:grid md:grid-cols-12"]>
+              <h3 className=[%tw "text-lg font-semibold md:col-span-5"]>question->React.string</h3>
+              <p className=[%tw "text-lg font-semibold text-gray-800 md:col-span-7 pl-0 md:pl-10"]>answer->React.string</p>
+            </div>
+          })
+          ->React.array
+        }
+      </div>
+    </div>
+
     <div className=[%tw "p-10 flex flex-col bg-gray-900 items-center"]>
       <div
         className=[%tw
