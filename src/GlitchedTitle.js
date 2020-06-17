@@ -70,7 +70,7 @@ const Glitch = styled.h2.attrs(({children}) => ({
     text-shadow: 2px 0 ${glitchColor2};
     background-color: ${backgroundColor};
     color: ${textColor};
-    animation: ${noiseAnimation} 3s infinite linear alternate-reverse;
+    animation: ${noiseAnimation} 4s infinite linear alternate-reverse;
   }
 `
 

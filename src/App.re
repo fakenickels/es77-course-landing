@@ -1,20 +1,30 @@
 [@bs.val] external requireAsset: string => string = "require";
 
+[@bs.module "./Tweet"] external tweet: unit => React.element = "default";
+
 [@react.component]
 let make = () => {
   <>
-    <div className=[%tw "bg-black h-64 py-64 md:py-0 md:h-screen w-screen lg:block"]>
+    <div
+      className=[%tw
+        "bg-black h-64 py-64 md:py-0 md:h-screen w-screen lg:block"
+      ]>
       <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
         <div>
           <GlitchedTitle glitchText1="ReasonML">
             {React.string("ES2077")}
           </GlitchedTitle>
-
           <h3 className=[%tw "text-center font-mono"]>
             {React.string("THE COURSE")}
           </h3>
         </div>
       </div>
+    </div>
+    <div className=[%tw "flex flex-col items-center bg-gray-100 py-10"]>
+      <h3 className=[%tw "text-center font-semibold text-4xl font-mono"]>
+        {j|Lançamento no Twitter|j}->React.string
+      </h3>
+      {tweet()}
     </div>
     <div className=[%tw "bg-yellow-400 lg:px-64 lg:py-32 sm:px-32 sm:py-10"]>
       <div className=[%tw "pb-10 flex justify-center"]>
@@ -111,28 +121,47 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
         </div>
       </div>
     </div>
-
     <div className=[%tw "py-16 px-10"]>
-      <h1 className=[%tw "text-6xl"]>"Perguntas frequentes"->React.string</h1>
+      <h1 className=[%tw "text-6xl"]>
+        "Perguntas frequentes"->React.string
+      </h1>
       <div className=[%tw "pt-10 divide-y divide-gray-200"]>
-        {
-          [|
-            ({j|Preciso desse curso pra aprender Reason?|j}, {j|NÃO! Você pode aprender nas documentações oficiais e da comunidade. Eu apenas te guio pelo caminho mais rapidamente.|j}),
-            ({j|Preciso saber programação funcional antes?|j}, {j|Ter alguma noção ajudaria, mas não é preciso. Você vai poder tirar dúvidas comigo a qualquer hora durante o curso.|j}),
-            ({j|Posso ser estornado?|j}, {j|Sim. A qualquer momento em até no máximo 3 semanas. Fale comigo no https://t.me/fakenickels|j}),
-            ({j|Posso ter um certificado desse curso?|j}, {j|Se você precisa de um certificado fale comigo no https://t.me/fakenickels|j}),
-          |]
-          ->Belt.Array.mapWithIndex((index, (question, answer)) => {
-            <div key={string_of_int(index)} className=[%tw "py-10 md:grid md:grid-cols-12"]>
-              <h3 className=[%tw "text-lg font-semibold md:col-span-5"]>question->React.string</h3>
-              <p className=[%tw "text-lg font-semibold text-gray-800 md:col-span-7 pl-0 md:pl-10"]>answer->React.string</p>
-            </div>
-          })
-          ->React.array
-        }
+        {[|
+           (
+             {j|Preciso desse curso pra aprender Reason?|j},
+             {j|NÃO! Você pode aprender nas documentações oficiais e da comunidade. Eu apenas te guio pelo caminho mais rapidamente.|j},
+           ),
+           (
+             {j|Preciso saber programação funcional antes?|j},
+             {j|Ter alguma noção ajudaria, mas não é preciso. Você vai poder tirar dúvidas comigo a qualquer hora durante o curso.|j},
+           ),
+           (
+             {j|Posso ser estornado?|j},
+             {j|Sim. A qualquer momento em até no máximo 3 semanas. Fale comigo no https://t.me/fakenickels|j},
+           ),
+           (
+             {j|Posso ter um certificado desse curso?|j},
+             {j|Se você precisa de um certificado fale comigo no https://t.me/fakenickels|j},
+           ),
+         |]
+         ->Belt.Array.mapWithIndex((index, (question, answer)) => {
+             <div
+               key={string_of_int(index)}
+               className=[%tw "py-10 md:grid md:grid-cols-12"]>
+               <h3 className=[%tw "text-lg font-semibold md:col-span-5"]>
+                 question->React.string
+               </h3>
+               <p
+                 className=[%tw
+                   "text-lg font-semibold text-gray-800 md:col-span-7 pl-0 md:pl-10"
+                 ]>
+                 answer->React.string
+               </p>
+             </div>
+           })
+         ->React.array}
       </div>
     </div>
-
     <div className=[%tw "p-10 flex flex-col bg-gray-900 items-center"]>
       <div
         className=[%tw
