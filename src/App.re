@@ -20,7 +20,7 @@ let make = () => {
         </div>
       </div>
     </div>
-    <div className=[%tw "flex flex-col items-center bg-gray-100 py-10"]>
+    <div className=[%tw "flex flex-col items-center bg-gray-100 py-10 sm:px-10"]>
       <h3 className=[%tw "text-center font-semibold text-4xl font-mono"]>
         {j|Lançamento no Twitter|j}->React.string
       </h3>
