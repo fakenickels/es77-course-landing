@@ -132,6 +132,14 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
              {j|NÃO! Você pode aprender nas documentações oficiais e da comunidade. Eu apenas te guio pelo caminho mais rapidamente.|j},
            ),
            (
+             {j|Por quanto tempo terei acesso ao curso?|j},
+             {j|Depois da compra, o acesso ao curso é vitalício|j},
+           ),
+           (
+             {j|Quando as novas aulas são liberadas?|j},
+             {j|Toda quinta-feira às 19h (Brasília).|j},
+           ),
+           (
              {j|Preciso saber programação funcional antes?|j},
              {j|Ter alguma noção ajudaria, mas não é preciso. Você vai poder tirar dúvidas comigo a qualquer hora durante o curso.|j},
            ),
