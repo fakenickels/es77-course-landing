@@ -133,7 +133,7 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
            ),
            (
              {j|Por quanto tempo terei acesso ao curso?|j},
-             {j|Depois da compra, o acesso ao curso é vitalício|j},
+             {j|Depois da compra, o acesso ao curso é vitalício.|j},
            ),
            (
              {j|Quando as novas aulas são liberadas?|j},
