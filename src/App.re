@@ -115,7 +115,7 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
               className=[%tw
                 "bg-black shadow-md text-white hover:bg-gray-900 font-bold text-2xl py-2 px-20 md:px-32 rounded"
               ]>
-              {React.string("Vanna em manutenção")}
+              {React.string("Comprar")}
             </a>
           </div>
         </div>
