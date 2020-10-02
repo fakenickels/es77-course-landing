@@ -95,7 +95,7 @@ let make = () => {
   <>
     <div
       className=[%tw
-        "bg-black h-64 py-64 md:py-0 md:h-screen w-screen lg:block"
+        "bg-black h-64 py-64 md:py-0 md:h-screen w-full lg:block"
       ]>
       <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
         <div>
