@@ -31,8 +31,11 @@ module BuySection = {
     <div className=[%tw "py-32 lg:p-32 bg-yellow-400 flex justify-center"]>
       <div className=[%tw "bg-white rounded shadow w-11/12 lg:w-1/3"]>
         <div className=[%tw "bg-gray-100 p-10 "]>
-          <h1 className=[%tw "font-extrabold text-6xl"]>
+          <h3 className=[%tw "font-extrabold text-2xl line-through"]>
             {React.string("R$ 150")}
+          </h3>
+          <h1 className=[%tw "font-extrabold text-6xl"]>
+            {React.string("R$ 75")}
           </h1>
         </div>
         <div className=[%tw "px-10 py-5"]>
