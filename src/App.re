@@ -2,68 +2,16 @@
 
 [@bs.module "./Tweet"] external tweet: unit => React.element = "default";
 
-[@react.component]
-let make = () => {
-  <>
-    <div
-      className=[%tw
-        "bg-black h-64 py-64 md:py-0 md:h-screen w-screen lg:block"
-      ]>
-      <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
-        <div>
-          <GlitchedTitle glitchText1="ReasonML">
-            {React.string("ES2077")}
-          </GlitchedTitle>
-          <h3 className=[%tw "text-center font-mono"]>
-            {React.string("THE COURSE")}
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div className=[%tw "flex flex-col items-center bg-gray-100 py-10 sm:px-10"]>
-      <h3 className=[%tw "text-center font-semibold text-4xl font-mono"]>
-        {j|Lançamento no Twitter|j}->React.string
-      </h3>
-      {tweet()}
-    </div>
-    <div className=[%tw "bg-yellow-400 lg:px-64 lg:py-32 sm:px-32 sm:py-10"]>
-      <div className=[%tw "pb-10 flex justify-center"]>
-        <img
-          src={requireAsset("./images/fakenickels.jpg")}
-          className=[%tw "h-32 w-32 rounded-full"]
-        />
-      </div>
-      <p className=[%tw "font-mono p-10 md:p-0"]>
-        {React.string(
-           {j|Olá 👋 eu sou Gabriel R. Abreu! CTO da Astrocoders, entusiasta de código aberto, mantedor do ReasonApolloHooks e criador do ReForm.|j},
-         )}
-      </p>
-      {[|
-         {j|Nos últimos anos, trabalhei diretamente com projetos na que enviaram dezenas de milhares de linhas de código de ReasonML para produção. Não foi um caminho fácil mas uma escolha certeira:
-Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
-         {j|Eu gostei tanto da linguagem que acabei virando o "louco do Reason". Na Astro ajudei de perto várias pessoas do meu time a aprender a linguagem. Dei algumas talks, contribui com a comunidade e organizei alguns eventos sobre.|j},
-         {j|Mas mesmo assim percebo que ainda não existe muito material em português sobre programação funcional vindo de alguém com experiência em produção no assunto.|j},
-         {j|Por isso trago esse mini-curso como o começo de uma jornada para disponibilizar esse conhecimento de forma acessível.|j},
-       |]
-       ->Belt.Array.mapWithIndex((index, saying) => {
-           <p
-             key={Js.Int.toString(index)}
-             className=[%tw "font-mono p-10 md:p-0 md:pt-10"]>
-             {React.string(saying)}
-           </p>
-         })
-       ->React.array}
-    </div>
-    <div className=[%tw "py-16"]>
+module Testimonial = {
+  [@react.component]
+  let make = (~name, ~role, ~image, ~saying) => {
+    <div className=[%tw "py-5"]>
       <div className=[%tw "pb-10 flex items-center flex-col"]>
-        <img
-          src={requireAsset("./images/testimonial-guilherme.jpg")}
-          className=[%tw "h-16 w-16 rounded-full"]
-        />
+        <img src=image className=[%tw "h-16 w-16 rounded-full"] />
         <h3 className=[%tw "pt-5 font-bold text-center"]>
-          {React.string("Guilherme Decampo ")}
+          {React.string(name)}
           <span className=[%tw "text-gray-700"]>
-            {React.string("/ CEO da Astrocoders")}
+            {React.string(" / " ++ role)}
           </span>
         </h3>
       </div>
@@ -71,12 +19,15 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
         className=[%tw
           "font-mono text-center px-5 lg:px-64 text-xl font-bold italic text-gray-800"
         ]>
-        {React.string(
-           {j|“Nos últimos anos, o Gabriel tem liderado a adoção de ReasonML na Astro.
-        Sem dúvidas o time conseguiu adotar e entender os conceitos mais rapidamente com a ajuda e explicações dele.”|j},
-         )}
+        {React.string({j|“$saying”|j})}
       </p>
-    </div>
+    </div>;
+  };
+};
+
+module BuySection = {
+  [@react.component]
+  let make = () => {
     <div className=[%tw "py-32 lg:p-32 bg-yellow-400 flex justify-center"]>
       <div className=[%tw "bg-white rounded shadow w-11/12 lg:w-1/3"]>
         <div className=[%tw "bg-gray-100 p-10 "]>
@@ -120,7 +71,78 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
           </div>
         </div>
       </div>
+    </div>;
+  };
+};
+
+[@react.component]
+let make = () => {
+  <>
+    <div
+      className=[%tw
+        "bg-black h-64 py-64 md:py-0 md:h-screen w-screen lg:block"
+      ]>
+      <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
+        <div>
+          <GlitchedTitle glitchText1="ReasonML">
+            {React.string("ES2077")}
+          </GlitchedTitle>
+          <h3 className=[%tw "text-center font-mono"]>
+            {React.string("THE COURSE")}
+          </h3>
+        </div>
+      </div>
     </div>
+    <div
+      className=[%tw "flex flex-col items-center bg-gray-100 py-10 sm:px-10"]>
+      <h3 className=[%tw "text-center font-semibold text-4xl font-mono"]>
+        {j|Lançamento no Twitter|j}->React.string
+      </h3>
+      {tweet()}
+    </div>
+    <div className=[%tw "bg-yellow-400 lg:px-64 lg:py-32 sm:px-32 sm:py-10"]>
+      <div className=[%tw "pb-10 flex justify-center"]>
+        <img
+          src={requireAsset("./images/fakenickels.jpg")}
+          className=[%tw "h-32 w-32 rounded-full"]
+        />
+      </div>
+      <p className=[%tw "font-mono p-10 md:p-0"]>
+        {React.string(
+           {j|Olá 👋 eu sou Gabriel R. Abreu! CTO da Astrocoders, entusiasta de código aberto, mantedor do ReasonApolloHooks e criador do ReForm.|j},
+         )}
+      </p>
+      {[|
+         {j|Nos últimos anos, trabalhei diretamente com projetos na que enviaram dezenas de milhares de linhas de código de ReasonML para produção. Não foi um caminho fácil mas uma escolha certeira:
+Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
+         {j|Eu gostei tanto da linguagem que acabei virando o "louco do Reason". Na Astro ajudei de perto várias pessoas do meu time a aprender a linguagem. Dei algumas talks, contribui com a comunidade e organizei alguns eventos sobre.|j},
+         {j|Mas mesmo assim percebo que ainda não existe muito material em português sobre programação funcional vindo de alguém com experiência em produção no assunto.|j},
+         {j|Por isso trago esse mini-curso como o começo de uma jornada para disponibilizar esse conhecimento de forma acessível.|j},
+       |]
+       ->Belt.Array.mapWithIndex((index, saying) => {
+           <p
+             key={Js.Int.toString(index)}
+             className=[%tw "font-mono p-10 md:p-0 md:pt-10"]>
+             {React.string(saying)}
+           </p>
+         })
+       ->React.array}
+    </div>
+    <div className=[%tw "py-16"]>
+      <Testimonial
+        name="Guilherme Decampo"
+        role="CEO da Astrocoders"
+        saying={j|Nos últimos anos, o Gabriel tem liderado a adoção de ReasonML na Astro. Sem dúvidas o time conseguiu adotar e entender os conceitos mais rapidamente com a ajuda e explicações dele.|j}
+        image={requireAsset("./images/testimonial-guilherme.jpg")}
+      />
+      <Testimonial
+        name="Arthur Barroso"
+        role="Aluno"
+        image="https://avatars2.githubusercontent.com/u/48794198?s=400"
+        saying={j|Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em Reason. Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas. Posso dizer que se hoje sou um programador melhor devo em muito ao Reason e, principalmente ao Gabriel com seu curso e todo o suporte dado.|j}
+      />
+    </div>
+    <BuySection />
     <div className=[%tw "py-16 px-10"]>
       <h1 className=[%tw "text-6xl"]>
         "Perguntas frequentes"->React.string
