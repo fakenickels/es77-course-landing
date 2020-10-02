@@ -64,7 +64,7 @@ module BuySection = {
           </ul>
           <div className=[%tw "w-full flex justify-center"]>
             <a
-              href="https://mpago.la/1dWbMez"
+              href="https://checkout.vanna.app?merchantId=7cPBFtDngJGLTkcXP&checkoutId=L5brotEuSsuLEWjCm&callbackURI=https%3A%2F%2Fjourney.fakenickels.dev%2F"
               target="_blank"
               className=[%tw
                 "bg-black shadow-md text-white hover:bg-gray-900 font-bold text-2xl py-2 px-20 md:px-32 rounded"
