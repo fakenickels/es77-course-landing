@@ -137,7 +137,7 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
            ),
            (
              {j|Quando as novas aulas são liberadas?|j},
-             {j|Toda quinta-feira às 19h (Brasília).|j},
+             {j|Todas as aulas já estão disponíveis.|j},
            ),
            (
              {j|Preciso saber programação funcional antes?|j},
