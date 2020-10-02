@@ -72,6 +72,18 @@ module BuySection = {
               {React.string("Comprar")}
             </a>
           </div>
+          <div className="border w-full my-5" />
+          <div className=[%tw "w-full flex justify-center"]>
+            <a
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SKE95YYAKCJN"
+              target="_blank"
+              className=[%tw
+                "bg-white border shadow-md text-black hover:bg-gray-300 font-bold text-base py-2 px-10 md:px-32 rounded text-center"
+              ]>
+              {React.string("I'm buying from another country")}
+            </a>
+          </div>
+          <p className=[%tw "text-gray-600 text-xs pt-2" ]>"Buy checking out with PayPal you'll be contacted via your PayPal account email after payment confirmation"->React.string</p>
         </div>
       </div>
     </div>;
