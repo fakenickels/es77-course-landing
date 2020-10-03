@@ -83,7 +83,7 @@ module BuySection = {
               {React.string("I'm buying from another country")}
             </a>
           </div>
-          <p className=[%tw "text-gray-600 text-xs pt-2" ]>"Buy checking out with PayPal you'll be contacted via your PayPal account email after payment confirmation"->React.string</p>
+          <p className=[%tw "text-gray-600 text-xs pt-2" ]>"Buy checking out with PayPal you'll be contacted via your PayPal account email after payment confirmation. Also send me a message at twitter.com/fakenickels."->React.string</p>
         </div>
       </div>
     </div>;
