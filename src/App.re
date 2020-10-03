@@ -108,13 +108,34 @@ let make = () => {
         </div>
       </div>
     </div>
-    <div
-      className=[%tw "flex flex-col items-center bg-gray-100 py-10 sm:px-10"]>
-      <h3 className=[%tw "text-center font-semibold text-4xl font-mono"]>
-        {j|Lançamento no Twitter|j}->React.string
-      </h3>
-      {tweet()}
+    <BuySection />
+    <div className=[%tw "py-16"]>
+      <Testimonial
+        name="Guilherme Decampo"
+        role="CEO da Astrocoders"
+        saying={j|Nos últimos anos, o Gabriel tem liderado a adoção de ReasonML na Astro. Sem dúvidas o time conseguiu adotar e entender os conceitos mais rapidamente com a ajuda e explicações dele.|j}
+        image={requireAsset("./images/testimonial-guilherme.jpg")}
+      />
+      <Testimonial
+        name="Arthur Barroso"
+        role="Aluno"
+        image="https://avatars2.githubusercontent.com/u/48794198?s=400"
+        saying={j|Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em Reason. Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas. Posso dizer que se hoje sou um programador melhor devo em muito ao Reason e, principalmente ao Gabriel com seu curso e todo o suporte dado.|j}
+      />
+      <Testimonial
+        name="Marcos Oliveira"
+        role="Designer & Dev lindo na Lukin Co"
+        image="https://avatars0.githubusercontent.com/u/20327229?s=400"
+        saying={j|Mesmo já conhecendo ReasonML e o utilizando em diversos projetos, fiz questão de comprar o curso pois sei que o conteúdo produzido pelo Gabriel é de altíssima qualidade. Certamente, este curso é umas das melhores formas de se começar com ReasonML. Gabriel não só conhece a tecnologia, como também a utiliza em diversos produtos dele, não tenho dúvidas de que o curso vale super a pena para desenvolvedores de diversos níveis e linguagens.|j}
+      />
+      <Testimonial
+        name="Celso Bonutti"
+        role="Aluno & Mantainer da @fp_ssa"
+        image="https://avatars0.githubusercontent.com/u/12688694?s=400"
+        saying={j|se esse curso já existisse quando eu comecei a aprender reason, eu n teria gasto 2 semanas tentando descobrir como fazer setup de um projeto APOKDOPKWDPOKAWPORK|j}
+      />
     </div>
+    <BuySection />
     <div className=[%tw "bg-yellow-400 lg:px-64 lg:py-32 sm:px-32 sm:py-10"]>
       <div className=[%tw "pb-10 flex justify-center"]>
         <img
@@ -143,33 +164,13 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
          })
        ->React.array}
     </div>
-    <div className=[%tw "py-16"]>
-      <Testimonial
-        name="Guilherme Decampo"
-        role="CEO da Astrocoders"
-        saying={j|Nos últimos anos, o Gabriel tem liderado a adoção de ReasonML na Astro. Sem dúvidas o time conseguiu adotar e entender os conceitos mais rapidamente com a ajuda e explicações dele.|j}
-        image={requireAsset("./images/testimonial-guilherme.jpg")}
-      />
-      <Testimonial
-        name="Arthur Barroso"
-        role="Aluno"
-        image="https://avatars2.githubusercontent.com/u/48794198?s=400"
-        saying={j|Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em Reason. Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas. Posso dizer que se hoje sou um programador melhor devo em muito ao Reason e, principalmente ao Gabriel com seu curso e todo o suporte dado.|j}
-      />
-      <Testimonial
-        name="Marcos Oliveira"
-        role="Designer & Dev lindo na Lukin Co"
-        image="https://avatars0.githubusercontent.com/u/20327229?s=400"
-        saying={j|Mesmo já conhecendo ReasonML e o utilizando em diversos projetos, fiz questão de comprar o curso pois sei que o conteúdo produzido pelo Gabriel é de altíssima qualidade. Certamente, este curso é umas das melhores formas de se começar com ReasonML. Gabriel não só conhece a tecnologia, como também a utiliza em diversos produtos dele, não tenho dúvidas de que o curso vale super a pena para desenvolvedores de diversos níveis e linguagens.|j}
-      />
-      <Testimonial
-        name="Celso Bonutti"
-        role="Aluno & Mantainer da @fp_ssa"
-        image="https://avatars0.githubusercontent.com/u/12688694?s=400"
-        saying={j|se esse curso já existisse quando eu comecei a aprender reason, eu n teria gasto 2 semanas tentando descobrir como fazer setup de um projeto APOKDOPKWDPOKAWPORK|j}
-      />
+    <div
+      className=[%tw "flex flex-col items-center bg-gray-100 py-10 sm:px-10"]>
+      <h3 className=[%tw "text-center font-semibold text-4xl font-mono"]>
+        {j|Lançamento no Twitter|j}->React.string
+      </h3>
+      {tweet()}
     </div>
-    <BuySection />
     <div className=[%tw "py-16 px-10"]>
       <h1 className=[%tw "text-6xl"]>
         "Perguntas frequentes"->React.string
@@ -246,7 +247,7 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
         className=[%tw
           "pt-10 text-center text-gray-600 font-semibold font-mono"
         ]>
-        {React.string({j|Desenvolvido com 🔥 por Astrocoders|j})}
+        {React.string({j|fakenickels © 2077|j})}
       </p>
     </div>
   </>;
