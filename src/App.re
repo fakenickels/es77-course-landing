@@ -75,7 +75,7 @@ module BuySection = {
           <div className="border w-full my-5" />
           <div className=[%tw "w-full flex justify-center"]>
             <a
-              href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SKE95YYAKCJN"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N8XRR7JHQQJB8"
               target="_blank"
               className=[%tw
                 "bg-white border shadow-md text-black hover:bg-gray-300 font-bold text-base py-2 px-10 md:px-32 rounded text-center"
@@ -155,6 +155,18 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
         role="Aluno"
         image="https://avatars2.githubusercontent.com/u/48794198?s=400"
         saying={j|Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em Reason. Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas. Posso dizer que se hoje sou um programador melhor devo em muito ao Reason e, principalmente ao Gabriel com seu curso e todo o suporte dado.|j}
+      />
+      <Testimonial
+        name="Marcos Oliveira"
+        role="Designer & Dev lindo na Lukin Co"
+        image="https://avatars0.githubusercontent.com/u/20327229?s=400"
+        saying={j|Mesmo já conhecendo ReasonML e o utilizando em diversos projetos, fiz questão de comprar o curso pois sei que o conteúdo produzido pelo Gabriel é de altíssima qualidade. Certamente, este curso é umas das melhores formas de se começar com ReasonML. Gabriel não só conhece a tecnologia, como também a utiliza em diversos produtos dele, não tenho dúvidas de que o curso vale super a pena para desenvolvedores de diversos níveis e linguagens.|j}
+      />
+      <Testimonial
+        name="Celso Bonutti"
+        role="Aluno & Mantainer da @fp_ssa"
+        image="https://avatars0.githubusercontent.com/u/12688694?s=400"
+        saying={j|se esse curso já existisse quando eu comecei a aprender reason, eu n teria gasto 2 semanas tentando descobrir como fazer setup de um projeto APOKDOPKWDPOKAWPORK|j}
       />
     </div>
     <BuySection />
