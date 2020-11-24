@@ -64,7 +64,7 @@ module BuySection = {
           </ul>
           <div className=[%tw "w-full flex justify-center"]>
             <a
-              href="https://mpago.la/29SNqwb"
+              href="https://checkout.vanna.app?merchantId=7cPBFtDngJGLTkcXP&checkoutId=L5brotEuSsuLEWjCm"
               target="_blank"
               className=[%tw
                 "bg-black shadow-md text-white hover:bg-gray-900 font-bold text-2xl py-2 px-20 md:px-32 rounded"
@@ -133,6 +133,12 @@ let make = () => {
         role="Aluno & Mantainer da @fp_ssa"
         image="https://avatars0.githubusercontent.com/u/12688694?s=400"
         saying={j|se esse curso já existisse quando eu comecei a aprender reason, eu n teria gasto 2 semanas tentando descobrir como fazer setup de um projeto APOKDOPKWDPOKAWPORK|j}
+      />
+      <Testimonial
+        name="Guilherme de Andrade"
+        role="Aluno"
+        image="https://github.com/guilhermedeandrade.png"
+        saying={j|ES2077 is ReasonML é curso muito bem pensado e produzido. Atráves dele, o Gabriel passa sua experiência com ReasonML em produção de uma forma clara e objetiva. Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReasonML.|j}
       />
     </div>
     <BuySection />
