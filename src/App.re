@@ -31,11 +31,8 @@ module BuySection = {
     <div className=[%tw "py-32 lg:p-32 bg-yellow-400 flex justify-center"]>
       <div className=[%tw "bg-white rounded shadow w-11/12 lg:w-1/3"]>
         <div className=[%tw "bg-gray-100 p-10 "]>
-          <h3 className=[%tw "font-extrabold text-2xl line-through"]>
-            {React.string("R$ 150")}
-          </h3>
           <h1 className=[%tw "font-extrabold text-6xl"]>
-            {React.string("R$ 75")}
+            {React.string("R$ 150")}
           </h1>
         </div>
         <div className=[%tw "px-10 py-5"]>
@@ -64,7 +61,7 @@ module BuySection = {
           </ul>
           <div className=[%tw "w-full flex justify-center"]>
             <a
-              href="https://checkout.vanna.app?merchantId=7cPBFtDngJGLTkcXP&checkoutId=L5brotEuSsuLEWjCm"
+              href="https://checkout.vanna.app?merchantId=7cPBFtDngJGLTkcXP&checkoutId=r4TAJitBmNsXtdDe5"
               target="_blank"
               className=[%tw
                 "bg-black shadow-md text-white hover:bg-gray-900 font-bold text-2xl py-2 px-20 md:px-32 rounded"
