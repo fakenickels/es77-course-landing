@@ -185,6 +185,10 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
              {j|NÃO! Você pode aprender nas documentações oficiais e da comunidade. Eu apenas te guio pelo caminho mais rapidamente.|j},
            ),
            (
+             {j|O curso vai ser atualizado pra REScript?|j},
+             {j|Sim. Ao longo de 2021 o curso será atualizado para abarcar tanto Reason e REScript. Todos que já compraram o curso terão acesso.|j},
+           ),
+           (
              {j|Por quanto tempo terei acesso ao curso?|j},
              {j|Depois da compra, o acesso ao curso é vitalício.|j},
            ),
