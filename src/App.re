@@ -1,3 +1,5 @@
+%raw "require('./App.css')"
+
 [@bs.val] external requireAsset: string => string = "require";
 
 [@bs.module "./Tweet"] external tweet: unit => React.element = "default";
@@ -94,16 +96,17 @@ module BuySection = {
 let make = () => {
   <>
     <div
-      className=[%tw
-        "bg-black h-64 py-64 md:py-0 md:h-screen w-full lg:block"
-      ]>
+      className={[%tw
+        "h-64 py-64 md:py-0 md:h-screen w-full lg:block"
+      ] ++ " bg-hero"}>
       <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
         <div>
           <GlitchedTitle glitchText1="ReasonML">
             {React.string("ES2077")}
           </GlitchedTitle>
-          <h3 className=[%tw "text-center font-mono"]>
-            {React.string("THE COURSE")}
+          <h3 className=[%tw "text-center font-mono text-white"]>
+            {React.string("UM TYPE NA ")}
+            <span className=[%tw "line-through"]>(React.string("GOSTOSA"))</span>
           </h3>
         </div>
       </div>
