@@ -1,3 +1,5 @@
+%raw "require('./App.css')"
+
 [@bs.val] external requireAsset: string => string = "require";
 
 [@bs.module "./Tweet"] external tweet: unit => React.element = "default";
@@ -31,9 +33,12 @@ module BuySection = {
     <div className=[%tw "py-32 lg:p-32 bg-yellow-400 flex justify-center"]>
       <div className=[%tw "bg-white rounded shadow w-11/12 lg:w-1/3"]>
         <div className=[%tw "bg-gray-100 p-10 "]>
-          <h1 className=[%tw "font-extrabold text-6xl"]>
+          <h1 className=[%tw "font-extrabold text-2xl line-through"]>
             {React.string("R$ 150")}
           </h1>
+          <h1 className=[%tw "font-extrabold text-6xl"]>
+            {React.string("R$ 77 - promo um type na [REDACTED]")}
+          </h1>    
         </div>
         <div className=[%tw "px-10 py-5"]>
           <ul className=[%tw "py-5 pb-10"]>
@@ -61,7 +66,7 @@ module BuySection = {
           </ul>
           <div className=[%tw "w-full flex justify-center"]>
             <a
-              href="https://checkout.vanna.app?merchantId=7cPBFtDngJGLTkcXP&checkoutId=r4TAJitBmNsXtdDe5"
+              href="https://www.mercadopago.com.br/checkout/v1/redirect?preference-id=146683234-4f231ea1-d138-4081-9537-d10782576c38"
               target="_blank"
               className=[%tw
                 "bg-black shadow-md text-white hover:bg-gray-900 font-bold text-2xl py-2 px-20 md:px-32 rounded"
@@ -91,16 +96,17 @@ module BuySection = {
 let make = () => {
   <>
     <div
-      className=[%tw
-        "bg-black h-64 py-64 md:py-0 md:h-screen w-full lg:block"
-      ]>
+      className={[%tw
+        "h-64 py-64 md:py-0 md:h-screen w-full lg:block"
+      ] ++ " bg-hero"}>
       <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
         <div>
           <GlitchedTitle glitchText1="ReasonML">
             {React.string("ES2077")}
           </GlitchedTitle>
-          <h3 className=[%tw "text-center font-mono"]>
-            {React.string("THE COURSE")}
+          <h3 className=[%tw "text-center font-mono text-white"]>
+            {React.string("UM TYPE NA ")}
+            <span className=[%tw "line-through"]>(React.string("GOSTOSA"))</span>
           </h3>
         </div>
       </div>
