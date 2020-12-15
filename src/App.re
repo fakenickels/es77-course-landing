@@ -37,8 +37,11 @@ module BuySection = {
             {React.string("R$ 150")}
           </h1>
           <h1 className=[%tw "font-extrabold text-6xl"]>
-            {React.string("R$ 77 - promo um type na [REDACTED]")}
-          </h1>    
+            {React.string("R$ 77")}
+          </h1>
+          <h1 className=[%tw "font-extrabold text-2xl text-gray-700"]>
+            {React.string("Um Type Na [REDACTED]")}
+          </h1>
         </div>
         <div className=[%tw "px-10 py-5"]>
           <ul className=[%tw "py-5 pb-10"]>
@@ -100,7 +103,7 @@ let make = () => {
         "h-64 py-64 md:py-0 md:h-screen w-full lg:block"
       ] ++ " bg-hero"}>
       <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
-        <div>
+        <div className=[%tw "bg-black pb-5"]>
           <GlitchedTitle glitchText1="ReasonML">
             {React.string("ES2077")}
           </GlitchedTitle>
