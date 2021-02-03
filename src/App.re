@@ -279,7 +279,7 @@ let make = () => {
       <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
         <div className=[%tw "bg-black pb-5"]>
           <GlitchedTitle glitchText1="ReasonML">
-            {React.string("REScript")}
+            {React.string("ReScript")}
           </GlitchedTitle>
           <h3 className=[%tw "text-center font-mono text-white"]>
             {React.string("Aguarde para o novo")}
