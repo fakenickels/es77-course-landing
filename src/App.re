@@ -282,7 +282,7 @@ let make = () => {
             {React.string("ReScript")}
           </GlitchedTitle>
           <h3 className=[%tw "text-center font-mono text-white"]>
-            {React.string("Aguarde para o novo")}
+            {React.string("Aguarde para o novo ")}
             <span className=[%tw "line-through"]>(React.string("ReasonML"))</span>
           </h3>
         </div>
