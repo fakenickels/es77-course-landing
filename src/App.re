@@ -96,7 +96,7 @@ module BuySection = {
 };
 
 [@react.component]
-let make = () => {
+let oldMake = () => {
   <>
     <div
       className={[%tw
@@ -267,4 +267,106 @@ Aplicações feitas usando ReasonML são praticamente inquebráveis.|j},
       </p>
     </div>
   </>;
+};
+
+[@react.component]  
+let make = () => {
+  <>
+    <div
+      className={[%tw
+        "h-64 py-64 md:py-0 md:h-screen w-full lg:block"
+      ] ++ " bg-hero"}>
+      <div className=[%tw "p-0 lg:p-64 sm:p-0"]>
+        <div className=[%tw "bg-black pb-5"]>
+          <GlitchedTitle glitchText1="ReasonML">
+            {React.string("REScript")}
+          </GlitchedTitle>
+          <h3 className=[%tw "text-center font-mono text-white"]>
+            {React.string("Aguarde para o novo")}
+            <span className=[%tw "line-through"]>(React.string("ReasonML"))</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+      <div className=[%tw "py-16 px-10"]>
+      <h1 className=[%tw "text-6xl"]>
+        "Perguntas frequentes"->React.string
+      </h1>
+      <div className=[%tw "pt-10 divide-y divide-gray-200"]>
+        {[|
+          
+           (
+             {j|Aguarde o que?|j},
+             {j|Como prometido, ao longo de 2021 o curso será atualizado para abarcar tanto Reason e REScript. Para evitar confusão estou temporariamente limitando a compra do curso para que novos alunos já vejam a nova versão. Alunos já inscritos continuam tendo acesso normal ao conteúdo.|j},
+           ),
+           (
+             {j|Preciso desse curso pra aprender REScript?|j},
+             {j|NÃO! Você pode aprender nas documentações oficiais e da comunidade. Eu apenas te guio pelo caminho mais rapidamente.|j},
+           ),
+           (
+             {j|Por quanto tempo terei acesso ao curso?|j},
+             {j|Depois da compra, o acesso ao curso é vitalício.|j},
+           ),
+           (
+             {j|Preciso saber programação funcional antes?|j},
+             {j|Ter alguma noção ajudaria, mas não é preciso. Você vai poder tirar dúvidas comigo a qualquer hora durante o curso.|j},
+           ),
+           (
+             {j|Posso ser estornado?|j},
+             {j|Sim. A qualquer momento em até no máximo 3 semanas. Fale comigo no https://t.me/fakenickels|j},
+           ),
+           (
+             {j|Posso ter um certificado desse curso?|j},
+             {j|Se você precisa de um certificado fale comigo no https://t.me/fakenickels|j},
+           ),
+         |]
+         ->Belt.Array.mapWithIndex((index, (question, answer)) => {
+             <div
+               key={string_of_int(index)}
+               className=[%tw "py-10 md:grid md:grid-cols-12"]>
+               <h3 className=[%tw "text-lg font-semibold md:col-span-5"]>
+                 question->React.string
+               </h3>
+               <p
+                 className=[%tw
+                   "text-lg font-semibold text-gray-800 md:col-span-7 pl-0 md:pl-10"
+                 ]>
+                 answer->React.string
+               </p>
+             </div>
+           })
+         ->React.array}
+      </div>
+    </div>
+    <div className=[%tw "p-10 flex flex-col bg-gray-900 items-center"]>
+      <div
+        className=[%tw
+          "flex flex-col lg:flex-row lg:justify-around items-center w-1/2"
+        ]>
+        {[|
+           ("Twitter", "https://twitter.com/fakenickels"),
+           ("GitHub", "https://github.com/fakenickels"),
+           ("Blog", "https://medium.com/@fakenickels"),
+         |]
+         ->Belt.Array.map(((label, link)) => {
+             <a
+               href=link
+               key=label
+               target="_blank"
+               className=[%tw
+                 "text-gray-400 hover:text-gray-300 px-2 font-bold pt-5 sm:pt-0"
+               ]>
+               {React.string(label)}
+             </a>
+           })
+         ->React.array}
+      </div>
+      <p
+        className=[%tw
+          "pt-10 text-center text-gray-600 font-semibold font-mono"
+        ]>
+        {React.string({j|fakenickels © 2077|j})}
+      </p>
+    </div>
+  </>
 };
